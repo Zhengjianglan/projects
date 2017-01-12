@@ -1,0 +1,61 @@
+CREATE TABLE IF NOT EXISTS `urls` (
+ `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+ `utype` VARCHAR(45) NOT NULL,
+ `url`  VARCHAR(100) NOT NULL,
+ `title` VARCHAR(100) ,
+ `remark` VARCHAR(100) ,
+ PRIMARY KEY (`id`))
+ ENGINE = InnoDB
+ AUTO_INCREMENT = 1
+ DEFAULT CHARACTER SET = utf8
+ COLLATE = utf8_general_ci
+ COMMENT = '用户表';
+
+ CREATE TABLE IF NOT EXISTS `jobs` (
+ `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+ `jobname` VARCHAR(45) NOT NULL,
+  `jobtype` VARCHAR(45) NOT NULL,
+  `salary` VARCHAR(45) NOT NULL,
+    `salarymin` decimal(8,2) NOT NULL,
+     `salarymax` decimal(8,2) NOT NULL,
+ `company` VARCHAR(45)   NOT NULL,
+ `exp` VARCHAR(45)  NOT NULL,
+  `expmin` VARCHAR(45)  ,
+   `expmax` VARCHAR(45)  ,
+      `eduback` VARCHAR(45)  ,
+  `remark` VARCHAR(500)  NOT NULL,
+ PRIMARY KEY (`id`))
+ ENGINE = InnoDB
+ AUTO_INCREMENT = 1
+ DEFAULT CHARACTER SET = utf8
+ COLLATE = utf8_general_ci
+ COMMENT = 'job';
+
+  CREATE TABLE IF NOT EXISTS `jtype` (
+ `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+ `typecode` VARCHAR(100) NOT NULL,
+  `typename` VARCHAR(100) NOT NULL,
+ PRIMARY KEY (`id`))
+ ENGINE = InnoDB
+ AUTO_INCREMENT = 1
+ DEFAULT CHARACTER SET = utf8
+ COLLATE = utf8_general_ci
+ COMMENT = 'jtype';
+
+table job
+{
+id,
+ name,
+ salary,
+ salarymin,
+ salarymax,
+ exp,
+ expmin,
+ expmax,
+ eduback,
+ tag,
+ companyname,
+ companydomain,
+ companyexp,
+ companytag
+ }

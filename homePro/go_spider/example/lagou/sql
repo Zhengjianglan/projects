@@ -1,0 +1,14 @@
+show tables;
+use spider;
+
+select salary,substring_index(substring_index(salary,'-',1),'k',1)  as min from jobs where id=30234;
+select salary,substring_index(substring_index(salary,'-',-1),'k',1) as max from jobs where id=30234;
+
+select salary,substring_index(substring_index(salary,'-',1),'k',1) as min,substring_index(substring_index(salary,'-',-11),'k',1) as max  from jobs where id=30234;
+select salary,substring_index(substring_index(salary,'-',1),'k',1) as min from jobs where id=30234;
+
+select count(*),min(salarymin),avg(salarymin),max(salarymin),min(salarymax),avg(salarymax),max(salarymax), from jobs where remark like '%.Net%';
+
+delete from urls;
+delete from jobs;
+delete from jtype;
