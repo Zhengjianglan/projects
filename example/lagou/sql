@@ -1,0 +1,27 @@
+show tables;
+use spider;
+
+CREATE DATABASE `spider`  CHARACTER SET 'utf8'  COLLATE 'utf8_general_ci';  
+
+CREATE USER 'dog'@'localhost' IDENTIFIED BY '123456'; 
+GRANT all privileges ON databasename.* TO 'username'@'host' 
+
+delete from urls1;
+delete from jobs;
+
+select * from urls1;
+select * from jobs;
+
+show variables like '%char%';
+
+set character_set_connection=utf8;
+set character_set_database=utf8;
+set character_set_results=utf8;
+set character_set_server=utf8;
+set character_set_system=utf8;
+set collation_connection=utf8;
+set collation_database=utf8;
+set collation_server=utf8;
+
+substring_index(substring_index(salary,'-',1),'k',1)
+update jobs set salarymin=substring_index(substring_index(lower(salary),'-',1),'k',1),salarymax=substring_index(substring_index(lower(salary),'-',-1),'k',1);
